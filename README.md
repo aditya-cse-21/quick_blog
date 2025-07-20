@@ -66,31 +66,32 @@
 
 1. **Clone the repository**
 
-   ```bash
-   git clone https://github.com/aditya-cse-21/quick_blog.git
-   cd quick_blog
-Install server dependencies
+```bash
+git clone https://github.com/aditya-cse-21/quick_blog.git
+cd quick_blog
+```
 
-bash
-Copy
-Edit
+2. **Install server dependencies**
+
+```bash
 cd server
 npm install
-Install client dependencies
+```
 
-bash
-Copy
-Edit
+3. **Install client dependencies**
+
+```bash
 cd ../client
 npm install
-Setup environment variables
+```
 
-Create a .env file in both client and server directories:
+4. **Setup environment variables**
 
-Server .env
-env
-Copy
-Edit
+Create a `.env` file in both `client` and `server` directories:
+
+#### Server `.env`
+
+```env
 PORT=3000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
@@ -100,16 +101,17 @@ GEMINI_API_KEY=your_gemini_api_key
 IMAGEKIT_PUBLIC_KEY=your_imagekit_public_key
 IMAGEKIT_PRIVATE_KEY=your_imagekit_private_key
 IMAGEKIT_URL_ENDPOINT=your_imagekit_url
-Client .env
-env
-Copy
-Edit
-VITE_BASE_URL=http://localhost:3000
-Start the servers
+```
 
-bash
-Copy
-Edit
+#### Client `.env`
+
+```env
+VITE_BASE_URL=http://localhost:3000
+```
+
+5. **Start the servers**
+
+```bash
 # Start backend
 cd server
 npm start
@@ -117,12 +119,15 @@ npm start
 # Start frontend (in a new terminal)
 cd client
 npm run dev
-Open http://localhost:5173 in your browser.
+```
 
-🗂️ Project Structure
-pgsql
-Copy
-Edit
+Open `http://localhost:5173` in your browser.
+
+---
+
+## 🗂️ Project Structure
+
+```
 QuickBlog/
 ├── client/            # React frontend
 │   ├── src/
@@ -140,74 +145,73 @@ QuickBlog/
 │   ├── routes/
 │   └── server.js
 └── README.md
-📡 API Overview
-Blog APIs
-GET /api/blog/all – Fetch all blogs
+```
 
-GET /api/blog/:blogId – View a single blog
+---
 
-POST /api/blog/add – Create new blog (admin)
+## 📡 API Overview
 
-POST /api/blog/delete – Delete a blog (admin)
+### Blog APIs
 
-POST /api/blog/toggle-publish – Change publish status
+- `GET /api/blog/all` – Fetch all blogs  
+- `GET /api/blog/:blogId` – View a single blog  
+- `POST /api/blog/add` – Create new blog (admin)  
+- `POST /api/blog/delete` – Delete a blog (admin)  
+- `POST /api/blog/toggle-publish` – Change publish status  
+- `POST /api/blog/add-comment` – Submit a comment  
+- `POST /api/blog/comments` – Get blog comments  
+- `POST /api/blog/generate` – AI-generated blog content  
 
-POST /api/blog/add-comment – Submit a comment
+### Admin APIs
 
-POST /api/blog/comments – Get blog comments
+- `POST /api/admin/login` – Admin login  
+- `GET /api/admin/blogs` – View all blogs  
+- `GET /api/admin/comments` – View all comments  
+- `GET /api/admin/dashboard` – View analytics  
+- `POST /api/admin/approve-comment` – Approve comment  
+- `POST /api/admin/delete-comment` – Delete comment  
 
-POST /api/blog/generate – AI-generated blog content
+---
 
-Admin APIs
-POST /api/admin/login – Admin login
+## 🧠 Smart AI Content Generation
 
-GET /api/admin/blogs – View all blogs
-
-GET /api/admin/comments – View all comments
-
-GET /api/admin/dashboard – View analytics
-
-POST /api/admin/approve-comment – Approve comment
-
-POST /api/admin/delete-comment – Delete comment
-
-🧠 Smart AI Content Generation
 QuickBlog integrates Gemini AI to help you:
 
-Auto-generate entire blog posts from titles
+- Auto-generate entire blog posts from titles  
+- Create catchy introductions and summaries  
+- Save time and avoid writer’s block  
 
-Create catchy introductions and summaries
+---
 
-Save time and avoid writer’s block
+## 🖼️ Image Optimization with ImageKit
 
-🖼️ Image Optimization with ImageKit
-CDN-delivered image assets
+- CDN-delivered image assets  
+- Smart compression and resizing  
+- Faster load times, WebP format support  
 
-Smart compression and resizing
+---
 
-Faster load times, WebP format support
+## 🚀 Deployment Guide
 
-🚀 Deployment Guide
-Frontend (Vercel)
-Link GitHub repo to Vercel
+### Frontend (Vercel)
 
-Add environment variables in the Vercel dashboard
+1. Link GitHub repo to Vercel  
+2. Add environment variables in the Vercel dashboard  
+3. Deploy directly with CI/CD support  
 
-Deploy directly with CI/CD support
+### Backend (Vercel)
 
-Backend (Vercel)
-Add vercel.json for serverless setup
+1. Add `vercel.json` for serverless setup  
+2. Set backend env vars on Vercel  
+3. Deploy with Vercel CLI or GitHub integration  
 
-Set backend env vars on Vercel
+---
 
-Deploy with Vercel CLI or GitHub integration
+## 🤝 Contributions Welcome
 
-🤝 Contributions Welcome
 Open a PR if you'd like to contribute! Follow these steps:
 
-bash
-Copy
-Edit
+```bash
 # Fork the repo
 # Create a new branch
 git checkout -b feature/NewFeature
@@ -217,16 +221,21 @@ git commit -m "Add: NewFeature"
 git push origin feature/NewFeature
 
 # Submit a Pull Request
-🙌 Credits
-Google Gemini AI for smart content generation
+```
 
-ImageKit for blazing-fast media delivery
+---
 
-Tailwind + React for a clean, modern UI
+## 🙌 Credits
 
-Community-driven libraries and tools ❤️
+- Google Gemini AI for smart content generation  
+- ImageKit for blazing-fast media delivery  
+- Tailwind + React for a clean, modern UI  
+- Community-driven libraries and tools ❤️  
 
-<div align="center"> Made with 💻 and ☕ by **Aditya**
+---
+
+<div align="center">
+Made with 💻 and ☕ by **Aditya**
+
 ⭐️ Don’t forget to star the repo if you like it!
-
-</div> ```
+</div>
