@@ -25,7 +25,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <p className='py-4 text-center text-sm md:text-base text-gray-500/80'>Copyright 2025 © QuickBlog - All Right Reserved.</p>
+      <p className='py-4 text-center text-sm md:text-base text-gray-500/80'>Copyright 2025 © QuickBlog - Made By Aditya.</p>
     </div>
   )
 }
